@@ -138,22 +138,28 @@ body, html {
 
 .modal-content {
     position: relative;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio 16:9 */
 }
 
-.modal-content video {
+iframe#day-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
+
 
 .close {
     position: absolute;
     top: 10px;
     right: 20px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
+    color: #fff; /* White color for visibility */
+    z-index: 1001; /* Ensure the close button is above the modal content */
 }
+
+
 
