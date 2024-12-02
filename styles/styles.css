@@ -1,0 +1,159 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.parallax {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.calendar {
+    display: flex;
+    flex-wrap: wrap; /* Allows blocks to wrap to new rows */
+    justify-content: center; /* Center the blocks */
+    gap: 10px; /* Space between blocks */
+    padding: 10% 20% 40%;
+    max-width: 100%; /* Responsive width */
+    margin: auto;
+}
+
+.logo {
+    flex: 0 0 100%; /* Full-width logo at the top */
+    text-align: center;
+    color: #ffffff; /* Bright white text for contrast */
+    font-family: "Sacramento", cursive; /* A festive font for a Christmas feel */
+    font-size: 4rem; /* Larger font size for emphasis */
+    font-weight: 800; /* Moderate weight for elegance */
+    padding: 30px; /* Add some padding for space around the text */
+    margin-bottom: 20px; /* Separate the header from the calendar */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8), 0 0 10px rgba(31, 2, 2, 0.6); /* Shadow and glow */
+    overflow: hidden; /* Ensure decorative elements are contained */
+
+}
+
+/* Add decorative elements */
+.logo::before,
+.logo::after {
+    content: "❄"; /* Snowflake symbol */
+    font-size: 2.5rem;
+    position: absolute;
+    animation: snowfall 6s linear infinite; /* Snowfall effect */
+    color: rgba(255, 255, 255, 0.5); /* Semi-transparent snowflakes */
+}
+
+
+.logo::before {
+    top: -20px; /* Start above the text */
+    left: 10%; /* Position slightly to the left */
+}
+
+.logo::after {
+    bottom: -20px; /* Start below the text */
+    right: 10%; /* Position slightly to the right */
+}
+
+/* Keyframes for snowfall animation */
+@keyframes snowfall {
+    0% {
+        transform: translateY(-20px) rotate(0deg); /* Start above */
+    }
+    100% {
+        transform: translateY(100px) rotate(360deg); /* Fall and rotate */
+    }
+}
+
+.day-block {
+    background-color: rgba(177, 10, 10, 0.9);
+    border: 1px solid rgb(99, 3, 3) ;
+    color: rgb(255, 255, 255);
+    font-family: "Sacramento", cursive;
+    font-weight: 1000;
+    font-size: 3.0rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(103, 2, 2, 0.8), 0 0 10px rgba(31, 2, 2, 0.6); /* Shadow and glow */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s;
+    flex: 1 0 16.66%; /* Default block takes up 1/6th of the row */
+    min-width: 150px; /* Minimum width for smaller screens */
+    aspect-ratio: 1.5; /* Ensures the aspect ratio remains square */
+
+    box-shadow: 5px 15px 10px rgba(8, 0, 0) ;
+    overflow: hidden;
+}
+
+/* Vary the size of certain blocks using a different flex value */
+.day-block.large {
+    flex: 1 0 33.33%; /* Larger block (takes up 1/3rd of the row) */
+}
+
+.day-block.small {
+    flex: 1 0 12.5%; /* Smaller block (takes up 1/8th of the row) */
+}
+
+.day-block:hover {
+    transform: scale(1.1);
+}
+
+.day-block.locked {
+    background-color: rgba(177, 10, 10, 0.75); /* Dimmed red */
+    cursor: not-allowed;
+}
+
+.day-block.locked:hover {
+    transform: none; /* Disable hover scaling for locked days */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content video {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
