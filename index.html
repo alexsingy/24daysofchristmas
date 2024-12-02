@@ -10,9 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cookie&family=Dancing+Script:wght@400..700&family=Festive&family=Great+Vibes&family=Kaushan+Script&family=Permanent+Marker&family=Sacramento&family=Sunshiney&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Parallax Background-->
     <div class="parallax">
         <video autoplay muted loop id="background-video">
-            <source src="Videos_2024/parallax.mp4" type="video/mp4">
+            <source src="parallax.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -23,12 +24,16 @@
     <div id="video-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <video controls id="day-video">
-                <source src="" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe 
+                id="day-video"
+                src="" 
+                frameborder="0"
+                allow="autoplay; fullscreen" 
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
+    
     <script src="scripts/scripts.js"></script>
 </body>
 </html>
