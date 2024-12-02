@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 dayBlock.textContent = '';
                 
                 // Remember the day as flipped
-             //   if (!flippedDays.includes(day)) {
-               //     flippedDays.push(day);
-                 //   localStorage.setItem('flippedDays', JSON.stringify(flippedDays));
-               // }
+                if (!flippedDays.includes(day)) {
+                    flippedDays.push(day);
+                    localStorage.setItem('flippedDays', JSON.stringify(flippedDays));
+                }
                 
                 // Show video in modal
                 dayVideo.src = `Videos_2024/day${day}.mp4`;
