@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // If the day was flipped previously, keep it flipped
         if (flippedDays.includes(day)) {
-            dayBlock.style.backgroundImage = `url(images/day${day}.jpg)`;
+            dayBlock.style.backgroundImage = `url(Images/day${day}.jpg)`;
             dayBlock.style.backgroundSize = "cover";
             dayBlock.style.backgroundPosition = "center";
             dayBlock.textContent = '';
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dayBlock.addEventListener('click', () => {
             if (isDecember && day <= today) {
                 // Flip effect: reveal image
-                dayBlock.style.backgroundImage = `url(images/day${day}.jpg)`;
+                dayBlock.style.backgroundImage = `url(Images/day${day}.jpg)`;
                 dayBlock.style.backgroundSize = "cover";
                 dayBlock.style.backgroundPosition = "center";
                 dayBlock.textContent = '';
