@@ -12,7 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
         4: "https://player.vimeo.com/video/1035141766?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
         5: "https://player.vimeo.com/video/1035141845?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
         6: "https://player.vimeo.com/video/1035141948?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
-        7: "https://player.vimeo.com/video/1035160633?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+        7: "https://player.vimeo.com/video/1035160633?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+        8: "https://player.vimeo.com/video/1037055524?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+        9: "https://player.vimeo.com/video/1037057301?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+        10: "https://player.vimeo.com/video/1037057651?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+        11: "https://player.vimeo.com/video/1037058295?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+        12: "https://player.vimeo.com/video/1037058766?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+        13: "https://player.vimeo.com/video/1037059047?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
     };
 
     // Fixed order of days
